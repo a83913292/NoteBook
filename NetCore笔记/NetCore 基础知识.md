@@ -181,6 +181,44 @@ Data Provider 数据供应
 
 ADO.NET 数据库通讯
 
+#### EF的Cmd 命令
+
+dotnet ef migrations add "添加说明"
+
+dotnet ef database update 更新数据库
+
+### RESFfull
+
+#### 内容协商
+
+SSO 单点登录
+
+   OAuth  JWT JSON Web Token
+
+   SMAL  xml
+
+ 配置 AddContorllers 
+
+在 ConfigureServices 里 AddControllers
+
+
+
+#### 添加配置 让 RESFfull 对xml type 也可以支持
+
+在Startup.cs 里面的 services.AddControllers加上
+
+
+
+#### 数据传输对象 DTO
+
+Model 面向业务
+
+DTO 则是面向界面,面向UI
+
+
+
+
+
 
 
 
