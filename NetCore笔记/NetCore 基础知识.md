@@ -217,9 +217,38 @@ DTO 则是面向界面,面向UI
 
 
 
+### 向API 传入参数
+
+#### 使用Attribute
+
+| attribute     | 参数来源                                            |
+| ------------- | --------------------------------------------------- |
+| [FromQuery]   | 请求url的参数字符串                                 |
+| [FromBody]    | 请求主体数据                                        |
+| [FromForm]    | 请求主体的表单数据（IFormFile,IFormFileCollection） |
+| [FromRoute]   | MVC架构下的Route路由URL的参数                       |
+| [FromService] | 数据来源于以服务依赖                                |
+
+#### FromQuery vs FromRoute
+
+[FromQuery] 参数来自地址栏  获取？后面参数
+
+https://www.test.com/search?pageNumber=1&query=埃及
+
+[FromRoute]  url片段的一部分
+
+https://www.test.com/touristRoutes/2343242342
 
 
 
+延时执行
 
+什么是IQueryable?
 
+在EF里面 我们一般用Linq 表达式创建 sql 语句，使用Linq表达式创建的变量就是IQueryable 类型的变量，使用linq 表达式没有真正执行sql 语句，生成出来IQueryable 变量不是查询结果 而是查询的表达式，这也是所谓的延时执行,当我们执行聚合操作时候才执行sql  eg：ToList(),SingleOrDefault(),Count()
 
+延时执行的目的
+
+为后续动态表达式提供可能
+
+减少数据库的执行次数
